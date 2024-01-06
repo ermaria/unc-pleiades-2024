@@ -1,0 +1,119 @@
+.body{
+    background-color: rgb(254, 254, 236);
+    
+}
+.box {
+    /*border: 5px solid black;
+    /*margin-bottom: 10px;*/
+    /*position:absolute;*/
+    /*width: fit-content;
+    height: fit-content;
+    /*top: 10;
+    bottom: 0;
+    right: 10;
+    left: 50;*/
+    /*z-index: 999;*/
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    gap: 0px;
+    scroll-margin-top: 145px;
+    /*padding-bottom: 10px;*/
+
+}
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    column-gap: 0px;
+    align-items: center;
+    /*position: relative;*/
+    /*border: 5px solid black;
+    display: flex;
+    /*overflow: hidden;*/
+    height: auto;
+    justify-content: center;
+}
+
+.hbox{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    marginBottom: 10px;
+}
+
+.head{
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #e4ebf0;
+    
+}
+
+.section_head{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin: 0px;
+    scroll-margin-top: 145px;
+    
+}
+
+.txt {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    justify-content: center;
+}
+
+.link{
+    font-family: 'Times New Roman', Times, serif;
+    color: #13294B;
+    text-decoration: none;
+
+}
+.link:hover {
+    color: #7BAFD4;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+.button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    margin-top: 1em;
+    background-color:#13294B;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:10px;
+    min-height:30px; 
+    min-width: 120px;
+}
+.button:hover{
+    background-color: #7BAFD4;
+}
+
+.player_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+}
+
+.player{
+    height: auto !important;
+    aspect-ratio: 16/9;
+}
+
+.photo_link{
+    opactity: 0;
+}
+
+.photo_link:hover{
+    opacity: .7;
+}

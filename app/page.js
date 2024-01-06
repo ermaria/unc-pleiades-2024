@@ -1,113 +1,115 @@
+'use client'
+import React from 'react';
 import Image from 'next/image'
+import styles from "@/app/styles.module.css";
+import Link from 'next/link';
+import "react-responsive-carousel/lib/styles/carousel.css"; 
+import { Carousel } from 'react-responsive-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <body style={{backgroundColor: '#e4ebf0'}}> 
+    <header class = {styles.head}>
+      <div class = {styles.box}>
+            <Link style={{
+              color: '#7BAFD4', 
+              fontFamily: 'Times New Roman', 
+              fontSize: '3.5em', 
+              margin: '0px',
+              marginTop: '10px',
+              justifySelf: 'center',
+              textDecoration: 'none',
+              letterSpacing: '12px'
+              }} href = '/'>PLEIADES 
+            </Link>
+          </div>
+
+          <nav class = {styles.hbox}>
+            <Link class={styles.link} href="#about">ABOUT</Link>
+            <Link class={styles.link} href="/roster">ROSTER</Link>
+            <Link class={styles.link} href="/history">HISTORY</Link>
+            <Link class={styles.link} href="/media">MEDIA</Link>
+            <Link class={styles.link} style={{marginTop: '16px', marginBottom: '16px'}} href="/contact">CONTACT</Link>
+        </nav>
+    </header>
+    <main> 
+        <div class = {styles.parent}>
+        <div style={{width: '70%'}}>
+        <Carousel autoPlay={true} autoPlayInterval="5000" showStatus={false} showThumbs={false} infiniteLoop={true} showIndicators={true} showArrows={false} dynamicHeight={true}> 
+            <div> 
+              <img src="/images/team_photo_23.jpg" alt="image3"/> 
+            </div> 
+
+            <div> 
+              <img src="/images/slider/slider_6.JPG" alt="image3"/> 
+            </div> 
+            <div> 
+              <img src="/images/slider/2023hug.jpg" alt="image3"/> 
+            </div> 
+            <div> 
+              <img src="/images/slider/slider_7.jpg" alt="image3"/> 
+            </div> 
+            <div> 
+              <img src="/images/slider/slider_8.jpeg" alt="image3"/> 
+            </div> 
+          </Carousel>
+          </div>
+            <div>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src = "/images/pleiades-constellation-2.png"
+              alt="constellation"
+              width = {280}
+              height={200}
+              style={{marginTop: '20px'}}
+
             />
-          </a>
-        </div>
-      </div>
+            </div>
+            <div style={{marginBottom: '20px'}} id="about" class = {styles.section_head}>
+              <p /*style = {{fontFamily: 'Times New Roman', fontSize: '20px', margin: '0px'}}*/>WHO ARE WE?</p>
+            </div>
+            <p class = {styles.txt} style={{maxWidth: '40%', margin: '0px', lineHeight: '30px'}}>Competing at the division 1 level in the USA Ultimate women's division, Pleiades brings together fun, 
+                  driven, committed, and relentlessly supportive athletes at UNC Chapel Hill–whether you've played ultimate for years or have never touched a disc before college. We pride ourselves on being a nationally competitive and high acheiving team while maintaining a focus on fostering leadership, 
+                  growth, development and friendship. Pleiades first qualified for Nationals in 2002 
+                  and has since won the 2021, 2022, and 2023 USA Ultimate National Championships. We are 30 athletes,
+                  seven stars, one team. 
+            </p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <ReactPlayer url='https://youtu.be/roLMeKxdX8M?si=iKipGEira3LUH3GV' controls={true} style={{marginTop: '40px', width: '100%'}}/>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <p style = {{margin: '60px'}}> ━━━━━━━━━━━━━━ </p>
+              
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          </div> 
     </main>
+    <footer /*style={{position: 'sticky', bottom: '0', zIndex: '999'}}*/>
+      <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '30px'}}>
+          <Link href="https://www.youtube.com/@uncpleiades9016" class={styles.link} style={{marginRight: '18px'}}>
+            <FontAwesomeIcon icon={faYoutube} style={{/*color: '#06193d',*/ width: '30px', height: '30px'}} />
+            </Link>
+
+            <Link href="https://www.instagram.com/uncpleiades" class={styles.link} style={{marginRight: '18px'}}>
+            <FontAwesomeIcon icon={faInstagram} style={{/*color: '#06193d',*/ width: '30px', height: '30px'}} />
+            </Link>
+
+            <Link href="https://twitter.com/unc_pleiades" class={styles.link} style={{marginRight: '18px'}}>
+            <FontAwesomeIcon icon={faTwitter} style={{/*color: '#06193d',*/ width: '30px', height: '30px'}} />
+            </Link>
+
+            <Link href="https://www.facebook.com/unc.pleiades/" class={styles.link} style={{marginRight: '18px'}}>
+            <FontAwesomeIcon icon={faFacebook} style={{/*color: '#06193d',*/ width: '30px', height: '30px'}} />
+            </Link>
+
+    </div>
+    </footer>
+    </body>
   )
 }

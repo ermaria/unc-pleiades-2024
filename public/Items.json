@@ -1,0 +1,25 @@
+
+{
+    "items": {
+      "bootstrap": [
+        {
+          "id": 1,
+          "imageUrl": "/images/champ-team-photo"
+        },
+        {
+          "id": 2,
+          "imageUrl": "/images/jess_martha.png"
+        },
+        {
+          "id": 3,
+          "imageUrl": "/images/kailyn.png"
+        },
+
+        {
+          "id": 4,
+          "imageUrl": "/images/x.png"
+        }
+      ]
+    }
+  }
+ 
