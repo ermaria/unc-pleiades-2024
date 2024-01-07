@@ -55,7 +55,7 @@ export default function Home() {
           /> 
 
         <p class={styles.section_head} style={{marginTop: '20px'}}>CONTACT US</p>
-        <p class={styles.txt}> For general questions or if you are a prospective student interested in UNC or Pleiades, please email</p> <p class={styles.txt} style={{color: '#7BAFD4', margin: '0px', fontWeight: 'bold', fontSize: '17px'}}>uncpleiades@gmail.com</p>
+        <p class={styles.txt}> For general questions or if you are a prospective student interested in UNC or Pleiades, please email</p> <p class={styles.txt} style={{color: '#7BAFD4', margin: '0px', fontWeight: 'bold', fontSize: '17px'}}>unc.pleiades@gmail.com</p>
         <p class={styles.txt}>If you are an alumni interested in becoming involved with the UNC ultimate alumni network, email </p><p class={styles.txt} style={{color: '#7BAFD4', margin: '0px', fontWeight: 'bold', fontSize: '17px'}}>uncultimate@gmail.com</p>
         <p class={styles.txt} style={{marginBottom: '0px'}}>We can't wait to hear from you!</p>
         <p style = {{margin: '60px'}}> ━━━━━━━━━━━━━━ </p>
